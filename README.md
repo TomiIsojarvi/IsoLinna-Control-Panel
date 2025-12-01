@@ -9,7 +9,7 @@ sudo apt-get update &&  sudo apt-get dist-upgrade && echo +++ upgrade successful
 ```sh
 sudo apt-get install bluez bluez-hcidump
 ```
-#### Create and activate a virtual environment
+#### (optional) Create and activate a virtual environment
 ```sh
 python -m venv .venv
 source .venv/bin/activate
