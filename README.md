@@ -1,4 +1,4 @@
-# IsoLinna
+# IsoLinna Control Panel
 ## Installation
 ### Raspberry Pi & Raspberry Pi OS
 #### Update the System
