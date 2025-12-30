@@ -8,13 +8,13 @@ class SensorButton(urwid.Button):
     #---------------------------------------------------------------------------------------------#
     # Constructor                                                                                 #
     #---------------------------------------------------------------------------------------------# 
-    def __init__(self, caption, settings: dict, callback=None, selected: bool = False):
+    def __init__(self, caption, callback=None, selected: bool = False):
         # Initialize Button with empty label; we'll use SelectableIcon
         super().__init__("", on_press=self.toggle, user_data=caption)
         self.caption = caption
         self.callback = callback
         self.selected = selected
-        self.settings = settings
+
 
         # Create the selectable text
         self.icon = urwid.SelectableIcon(caption)

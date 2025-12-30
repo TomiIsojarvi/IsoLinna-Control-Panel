@@ -51,9 +51,9 @@ class SensorsDialogBox:
         # Sensors in the sensors menu...
         # Is the selected sensors empty?
         if not self.selected_sensors:
-            self.automatic_button = SensorButton("Automatic", globals.settings, callback=self.automatic, selected=True)
+            self.automatic_button = SensorButton("Automatic", callback=self.automatic, selected=True)
         else:
-            self.automatic_button = SensorButton("Automatic", globals.settings, callback=self.automatic, selected=False)
+            self.automatic_button = SensorButton("Automatic", callback=self.automatic, selected=False)
 
         sensors_menu_items.append(self.automatic_button)
 
@@ -63,7 +63,6 @@ class SensorsDialogBox:
                 sensors_menu_items.append(
                     SensorButton(
                         sensor,
-                        settings=globals.settings,
                         callback=lambda btn, cap, idx=i: self.select_sensor(btn, idx),
                         selected=True
                     )
@@ -72,7 +71,6 @@ class SensorsDialogBox:
                 sensors_menu_items.append(
                     SensorButton(
                         sensor,
-                        settings=globals.settings,
                         callback=lambda btn, cap, idx=i: self.select_sensor(btn, idx),
                         selected=False
                     )

@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import sys
 import urwid
+
+import globals
 from buttons.custom_button import CustomButton
 
 #-------------------------------------------------------------------------------------------------#
@@ -20,10 +22,7 @@ class LoginScreen:
     #---------------------------------------------------------------------------------------------#
     # Constructor                                                                                 #
     #---------------------------------------------------------------------------------------------#
-    def __init__(self, width: int, height: int, auth) -> None:
-
-        # Store authentication object and initialize user variable
-        self.auth = auth
+    def __init__(self, width: int, height: int) -> None:
         self.user = None
 
         # Set UI width and height; use relative sizing if invalid dimensions are given
@@ -106,8 +105,12 @@ class LoginScreen:
         # Save the current widget so we can restore it
         original_widget = self.loop.widget
 
+        #---------------------------------------------------------------------#
+        # on_ok_clicked -                                                     #
+        #---------------------------------------------------------------------#
         def on_ok_clicked(button):
             self.loop.widget = original_widget  # Restore the original view
+        #---------------------------------------------------------------------#
 
         # Create error message and OK button
         error_text = urwid.Text(('error', message), align='center')
@@ -151,7 +154,7 @@ class LoginScreen:
             self.show_error_box("Please enter your password.")
         else:
             try:
-                self.user = self.auth.sign_in_with_email_and_password(email, password)
+                self.user = globals.auth.sign_in_with_email_and_password(email, password)
             except:
                 self.show_error_box("Invalid email or password!")
 

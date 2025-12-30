@@ -107,8 +107,8 @@ class MainScreen:
     #---------------------------------------------------------------------------------------------#
     def unhandled_key(self, k: str) -> None:
         if k in ("q", "Q"):
-            if globals.runFlag != None and globals.runFlag == True:
-                globals.runFlag.running = False
+            if globals.run_flag != None and globals.run_flag == True:
+                globals.run_flag.running = False
             sys.exit(0)
             
     #---------------------------------------------------------------------------------------------#

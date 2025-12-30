@@ -1,9 +1,7 @@
 loop = None
 settings = {}
-firebase_config = {}
 discovered_sensors = []
-selected_sensors = []
 time_stamps = {}
 auth = None
 db = None
-runFlag = None
+run_flag = None

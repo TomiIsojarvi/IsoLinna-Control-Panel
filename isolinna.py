@@ -15,8 +15,7 @@ from constants import *
 #                                              MAIN                                              #
 #------------------------------------------------------------------------------------------------#
 def main():
-    global LOGIN_SCREEN_HEIGHT, MAIN_SCREEN_HEIGHT, SETTINGS_PATH, FIREBASE_CONF_PATH
-
+    firebase_config = {}
     # Load settings...
 
     # Does settings-file exists?
@@ -68,7 +67,7 @@ def main():
             # Read the configuration from configuration-file
             try:
                 with open(FIREBASE_CONF_PATH, 'r') as f:
-                    globals.firebase_config = json.load(f)
+                    firebase_config = json.load(f)
             except IOError:
                 print(f"{FIREBASE_CONF_PATH}: Could not open file. Please check the file's permissions.")
                 sys.exit(1)
@@ -87,7 +86,7 @@ def main():
     # Setup Firebase...
 
     try:
-        firebase = pyrebase.initialize_app(globals.firebase_config)
+        firebase = pyrebase.initialize_app(firebase_config)
         globals.auth = firebase.auth()
         globals.db = firebase.database()
     except KeyError as e:
@@ -117,7 +116,7 @@ def main():
         else:
             # No...
             # Go to Login Screen.
-            login_screen = LoginScreen(LOGIN_SCREEN_WIDTH, LOGIN_SCREEN_HEIGHT, globals.auth)
+            login_screen = LoginScreen(LOGIN_SCREEN_WIDTH, LOGIN_SCREEN_HEIGHT)
             user = login_screen.main()
 
             # If login was successful...

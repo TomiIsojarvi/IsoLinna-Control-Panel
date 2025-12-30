@@ -1,7 +1,7 @@
 import urwid
 
 class CustomButton(urwid.Button):
-    def __init__(self, label, on_press=None, align="center", wrap="any", user_data=None):
+    def __init__(self, label, on_press=None, align="center", wrap="any"):
         super().__init__("")
         self._label = label  
         self._align = align
@@ -24,7 +24,7 @@ class CustomButton(urwid.Button):
 
         # Connect button click
         if on_press:
-            urwid.connect_signal(self, "click", on_press, user_data)
+            urwid.connect_signal(self, "click", on_press)
 
     def get_label(self):
         return self._label
