@@ -1,11 +1,11 @@
 # IsoLinna Control Panel
 <div style="display: flex; gap: 10px;">
-  <img src="screenshots/login.png" alt="Tooltip" style="width:200px;"/>
-  <img src="screenshots/main_screen.png" alt="Tooltip" style="width:200px;"/>
-  <img src="screenshots/broadcasting.png" alt="Tooltip" style="width:200px;"/>
-  <img src="screenshots/settings.png" alt="Tooltip" style="width:200px;"/>
-  <img src="screenshots/uuid.png" alt="Tooltip" style="width:200px;"/>
-  <img src="screenshots/interval.png" alt="Tooltip" style="width:200px;"/>
+  <img src="screenshots/login.png" alt="Tooltip" style="width:300px;"/>
+  <img src="screenshots/main_screen.png" alt="Tooltip" style="width:300px;"/>
+  <img src="screenshots/broadcasting.png" alt="Tooltip" style="width:300px;"/>
+  <img src="screenshots/settings.png" alt="Tooltip" style="width:300px;"/>
+  <img src="screenshots/uuid.png" alt="Tooltip" style="width:300px;"/>
+  <img src="screenshots/interval.png" alt="Tooltip" style="width:300px;"/>
 </div>
 
 ## Installation
