@@ -1,5 +1,6 @@
 # IsoLinna Control Panel
 <img src="screenshots/login.png" alt="Tooltip" style="width:200px;"/>
+<img src="screenshots/main_screen.png" alt="Tooltip" style="width:200px;"/>
 
 ## Installation
 ### Raspberry Pi & Raspberry Pi OS
